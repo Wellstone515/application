@@ -1,0 +1,198 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+
+ /* 全体 */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing:  border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+h2 {
+	font-size:30px;
+}
+
+h4 {
+	font-size: 15px;
+}
+
+.space1 {
+	height: 10px;
+}
+
+
+/*header*/
+
+header {
+	height: 50px;
+	width: 100%;
+	background-color: black;
+}
+
+.header-left {
+	float: left;
+	width: 50%;
+	height: 50px;
+}
+
+.header-left-box1 {
+	float: left;
+	width: 20%;
+	height: 50px;
+}
+
+.header-left-box2 {
+	float: left;
+	width: 80%;
+	height: 50px;
+}
+
+.header-left-text {
+	color: white;
+	font-size: 22px;
+}
+
+.header-right {
+	float: left;
+	width: 50%;
+	height: 50px;
+}
+
+.header-right-box1 {
+	float: left;
+	width: 24%;
+	height: 50px;
+}
+
+.header-right-box2, .header-right-box3, .header-right-box4, .header-right-box5 {
+	float: left;
+	width: 14%;
+	color: white;
+	padding-top: 5px;
+	text-align: right;
+}
+
+.header-right-box6 {
+	float: left;
+	width: 0%;
+	height: 50px;
+}
+
+.nav-list {
+	color: white;
+}
+
+
+/*main*/
+
+main{
+	width: 80%;
+	margin: 20px 10%;
+}
+
+/*main-side*/
+
+.main-side {
+	float: left;
+	width: 25%;
+	padding-right: 10px;
+}
+
+.field-size {
+	width: 100%;
+}
+
+.field-height {
+	height: 30px;
+}
+
+.book-index {
+	float: left;
+	width: 75%;
+}
+
+.book-show {
+	float: left;
+	width: 75%;
+}
+
+.book-edit {
+	width: 50%;
+	margin: 0 auto;
+}
+
+/*home-index*/
+
+.home-index {
+	width: 45%;
+	margin: 40px auto;
+}
+
+/*user-index*/
+
+.user-index {
+	float: left;
+	width: 75%;
+}
+
+.user-show {
+	float: left;
+	width: 75%;
+}
+
+/*user info*/
+
+.user-info-table {
+}
+
+/*book show*/
+
+.show-notice {
+	color: green;
+}
+
+.profile-img {
+	width: 60px;
+	height: 60px;
+}
+
+.profile-img2 {
+	width: 100px;
+	height: 100px;
+}
+
+
+/*footer*/
+
+footer {
+	text-align: right;
+	margin-right: 20%;
+}

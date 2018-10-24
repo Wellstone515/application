@@ -1,0 +1,33 @@
+<h2>User info</h2>
+
+<div class="user-edit">
+
+	<%= form_for(@user) do |f| %>
+		<% if @user.errors.any? %>
+		  <div id="error_explanation" class="alert alert-danger">
+		    <ul>
+		      <% @user.errors.full_messages.each do |message| %>
+		        <li><%= message %></li>
+		      <% end %>
+		    </ul>
+		  </div>
+		<% end %>
+	<span> Name</span><br>
+	<%= f.text_field :name %>
+
+	<div class="space1"></div>
+
+	<span> Introduction</span><br>
+	<%= f.text_area :introduct, cols:"24" %>
+
+	<div class="space1"></div>
+
+	<span> image</span><br>
+	<%= f.attachment_field :image %>
+
+	<div class="space1"></div>
+
+	<%= f.submit 'Update User', class:"btn btn-default" %>
+
+	<% end %>
+</div>

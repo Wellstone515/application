@@ -1,0 +1,13 @@
+<% if flash[:notice] %>
+<p class="show-notice"><%= flash[:notice] %></p>
+<% end %>
+
+<div class= "home-index">
+	<h1>welcome to <span class= "glyphicon glyphicon-book"></span> bookers !!</h1>
+	<p>In <span class= "glyphicon glyphicon-book"></span><b>bookers,</b><br>
+		you can share and exshange your opinions , inpressions , and emotions<br>
+		about varioius books!
+	</p>
+	<%= link_to " Log in", new_user_session_path, class:"field-size btn btn-primary" %><br>
+	<%= link_to " Sign up", new_user_registration_path, class:"field-size btn btn-success" %>
+</div>

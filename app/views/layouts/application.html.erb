@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Review</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+  <header class="clearfix">
+    <div class="header-left clearfix">
+      <div class="header-left-box1"></div>
+      <div class="header-left-box2">
+        <h4 class="header-left-text"> Bookers</h4>
+      </div>
+    </div>
+    <div class="header-right clearfix">
+      <% if user_signed_in? %>
+      <div class="header-right-box1"></div>
+      <div class="header-right-box2">
+        <%= link_to " Home", user_path(current_user.id), class:"nav-list btn btn-dark glyphicon glyphicon-home home" %></div>
+      <div class="header-right-box3">
+        <%= link_to " Users",users_index_path, class:"nav-list btn btn-dark glyphicon glyphicon-user users" %></div>
+      <div class="header-right-box4">
+        <%= link_to " Books", books_path, class:"nav-list btn btn-dark glyphicon glyphicon-book books" %></div>
+      <div class="header-right-box5">
+        <%= link_to " logout", destroy_user_session_path, method: :delete, class:"nav-list btn btn-dark glyphicon glyphicon-log-out logout" %></div>
+      <div class="header-right-box6"></div>
+
+      <% else %>
+      <div class="header-right-box1"></div>
+      <div class="header-right-box2">
+        <%= link_to " Home", homes_path, class:"nav-list btn btn-dark glyphicon glyphicon-home home" %>
+      </div>
+      <div class="header-right-box3">
+        <%= link_to " About", home_about_path, class:"nav-list btn btn-dark glyphicon glyphicon-link about" %>
+      </div>
+      <div class="header-right-box4">
+        <%= link_to " sign up", new_user_registration_path, class:"nav-list btn btn-dark glyphicon glyphicon-edit sign_up" %>
+      </div>
+      <div class="header-right-box5">
+        <%= link_to " login", new_user_session_path, class:"nav-list btn btn-dark glyphicon glyphicon-log-in sign_in" %>
+      </div>
+      <div class="header-right-box6"></div>
+
+      <% end %>
+    </div>
+  </header>
+
+
+  <main>
+
+    <%= yield %>
+
+  </main>
+
+  <footer>
+    <h4> CopyRight Infratop.inc</h4>
+  </footer>
+
+
+</body>
+</html>
